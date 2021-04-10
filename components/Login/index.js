@@ -74,7 +74,7 @@ export const Login = () => {
 
       </Box>
 
-      <Link href="/signup">Ainda não possui uma conta? Cadastre-se</Link>
+      <Link href="/signup">Ainda não possui uma conta? Cadastre-se agora</Link>
     </Container>
   )
 }
