@@ -38,7 +38,6 @@ export default function Home() {
       try {
         const user = await firebase.auth().createUserWithEmailAndPassword(values.email, values.password)
       }catch(error){
-
       }
     },
     validationSchema,
