@@ -15,16 +15,7 @@ import {
 } from '@chakra-ui/react'
 
 import {Logo} from './../components'
-
-let schema = yup.object().shape({
-  name: yup.string().required(),
-  age: yup.number().required().positive().integer(),
-  email: yup.string().email(),
-  website: yup.string().url(),
-  createdOn: yup.date().default(function () {
-    return new Date();
-  }),
-});
+import firebase from './../config/firebase'
 
 const validationSchema = yup.object().shape({
   email: yup.string().email('Email Inválido').required('Preenchimento obrigatório'),
@@ -43,7 +34,7 @@ export default function Home() {
     isSubmitting 
   } = useFormik({
     onSubmit: (values, form) => {
-      
+      console.log(values)
     },
     validationSchema,
     initialValues: {
